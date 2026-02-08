@@ -20,7 +20,7 @@ public class PlaylistRepository {
                     rs.getString("description"), null));
 
     public List<Playlist> findAll(){
-        return jdbc.query("SELECT id, name FROM playlists", playlistMapper);
+        return jdbc.query("SELECT id, name, description FROM playlists", playlistMapper);
     }
 
     public Playlist findById(int id) {
